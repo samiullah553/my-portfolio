@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samiullah | DevOps Engineer</title>
+  <meta name="description" content="Samiullah - DevOps Engineer specializing in AWS, CI/CD, Kubernetes, Docker, Terraform and automation." />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="prompt">~</span>
+        <span class="nav-name">samiullah</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact" class="nav-cta">hire me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">about</a></li>
+      <li><a href="#skills" class="mob-link">skills</a></li>
+      <li><a href="#experience" class="mob-link">experience</a></li>
+      <li><a href="#projects" class="mob-link">projects</a></li>
+      <li><a href="#contact" class="mob-link">hire me</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="terminal-badge">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-label">bash — portfolio.sh</span>
+      </div>
+      <div class="terminal-line">
+        <span class="prompt-hero">$</span>
+        <span class="cmd" id="typedCmd"></span><span class="cursor-blink">▌</span>
+      </div>
+      <h1 class="hero-name">Samiullah<br/><span class="accent">Khan</span></h1>
+      <p class="hero-role">DevOps Engineer <span class="divider">|</span> Cloud Architect <span class="divider">|</span> Automation Specialist</p>
+      <p class="hero-sub">Building resilient pipelines, scalable infrastructure, and zero-downtime deployments across AWS, Kubernetes & beyond.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years Exp.</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">99.9%</span><span class="stat-label">Uptime SLA</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="code-file">pipeline.yml</span>
+        </div>
+        <pre class="code-body"><span class="k">name</span>: <span class="s">CI/CD Pipeline</span>
+<span class="k">on</span>: [push]
+
+<span class="k">jobs</span>:
+  <span class="k">deploy</span>:
+    <span class="k">runs-on</span>: <span class="s">ubuntu-latest</span>
+    <span class="k">steps</span>:
+      - <span class="k">uses</span>: <span class="s">actions/checkout@v3</span>
+      - <span class="k">name</span>: <span class="s">Build Docker Image</span>
+        <span class="k">run</span>: <span class="s">|</span>
+          <span class="c">docker build -t app .</span>
+          <span class="c">docker push $ECR_URI</span>
+      - <span class="k">name</span>: <span class="s">Deploy to ECS</span>
+        <span class="k">run</span>: <span class="s">|</span>
+          <span class="c">aws ecs update-service \</span>
+          <span class="c">  --cluster prod \</span>
+          <span class="c">  --service app \</span>
+          <span class="c">  --force-new-deployment</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-tag">01 // about</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Turning infrastructure <span class="accent">chaos</span> into automated <span class="accent">order</span></h2>
+          <p>I'm a DevOps Engineer based in Karachi, Pakistan with hands-on experience building and managing CI/CD pipelines, container orchestration platforms, and cloud infrastructure across multiple production projects.</p>
+          <p>My focus is automation — if it can be scripted, it will be. From writing Jenkins pipelines to provisioning entire AWS environments with Terraform, I eliminate manual work and human error at every step.</p>
+          <p>I work across teams — collaborating with MERN, LAMP, and Java developers to streamline their workflows and ship code faster, safer, and more reliably.</p>
+          <div class="about-highlights">
+            <div class="highlight"><span class="hl-icon">⚡</span> Automation-first mindset</div>
+            <div class="highlight"><span class="hl-icon">☁️</span> AWS certified practitioner</div>
+            <div class="highlight"><span class="hl-icon">🔒</span> Security & compliance aware</div>
+            <div class="highlight"><span class="hl-icon">📊</span> Monitoring & observability</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="profile-img">
+            <div class="img-placeholder">
+              <span class="initials">SK</span>
+            </div>
+          </div>
+          <div class="about-info">
+            <div class="info-row"><span class="info-key">location</span><span class="info-val">Karachi, Pakistan 🇵🇰</span></div>
+            <div class="info-row"><span class="info-key">role</span><span class="info-val">DevOps Engineer</span></div>
+            <div class="info-row"><span class="info-key">availability</span><span class="info-val"><span class="available-dot"></span> Open to work</span></div>
+            <div class="info-row"><span class="info-key">languages</span><span class="info-val">Urdu, English</span></div>
+          </div>
+          <a href="#" class="btn-download">⬇ Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-tag">02 // skills</div>
+      <h2 class="section-title">Tech <span class="accent">Stack</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-icon">☁️</span>
+            <span>Cloud & Infrastructure</span>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">AWS (ECS, EKS, EC2, S3, RDS, IAM, VPC)</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Terraform</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-item"><span class="skill-name">AWS Lambda / Serverless</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-icon">🔁</span>
+            <span>CI/CD & Automation</span>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Jenkins</span><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
+            <div class="skill-item"><span class="skill-name">GitHub Actions</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+            <div class="skill-item"><span class="skill-name">GitLab CI/CD</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-icon">🐳</span>
+            <span>Containers & Orchestration</span>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Kubernetes (EKS)</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+            <div class="skill-item"><span class="skill-name">AWS ECR</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-icon">📡</span>
+            <span>Monitoring & Testing</span>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">AWS CloudWatch</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Postman / API Testing</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Shell Scripting / Bash</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Tags -->
+      <div class="tech-tags">
+        <span class="tag">AWS</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">GitLab CI</span>
+        <span class="tag">ECS</span>
+        <span class="tag">EKS</span>
+        <span class="tag">ECR</span>
+        <span class="tag">Lambda</span>
+        <span class="tag">VPC</span>
+        <span class="tag">IAM</span>
+        <span class="tag">RDS</span>
+        <span class="tag">Bash</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Git</span>
+        <span class="tag">Postman</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">YAML</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-tag">03 // experience</div>
+      <h2 class="section-title">Work <span class="accent">History</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">DevOps Engineer</h3>
+                <p class="company">Current Company <span class="location">· Karachi, Pakistan</span></p>
+              </div>
+              <span class="job-date">2020 — Present</span>
+            </div>
+            <ul class="job-duties">
+              <li>Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI across 10+ production projects</li>
+              <li>Provisioned and managed AWS infrastructure including ECS clusters, EKS, VPC, RDS, IAM roles, and Lambda functions</li>
+              <li>Automated entire software development lifecycle — from code commit to production deployment with zero manual steps</li>
+              <li>Implemented Infrastructure as Code using Terraform with modular, reusable architecture</li>
+              <li>Performed API testing and manual QA using Postman, ensuring robust error handling and try-catch coverage</li>
+              <li>Collaborated with MERN, LAMP, and Java development teams to streamline their delivery workflows</li>
+              <li>Set up CloudWatch monitoring, structured logging, and alerting for all production services</li>
+            </ul>
+            <div class="job-tags">
+              <span class="jtag">AWS</span>
+              <span class="jtag">ECS</span>
+              <span class="jtag">Jenkins</span>
+              <span class="jtag">Terraform</span>
+              <span class="jtag">Docker</span>
+              <span class="jtag">Kubernetes</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-tag">04 // projects</div>
+      <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🚀</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">⌥ Code</a>
+            </div>
+          </div>
+          <h3 class="project-name">AWS ECS Production Deployment</h3>
+          <p class="project-desc">End-to-end containerized application deployment on AWS ECS Fargate with Application Load Balancer, auto scaling, private networking, and CloudWatch monitoring. Achieved 99.9% uptime.</p>
+          <div class="project-tags">
+            <span>AWS ECS</span><span>Fargate</span><span>Terraform</span><span>ALB</span><span>CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🔁</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">⌥ Code</a>
+            </div>
+          </div>
+          <h3 class="project-name">Multi-Project CI/CD Platform</h3>
+          <p class="project-desc">Built a unified CI/CD platform supporting 10+ projects across Jenkins, GitHub Actions, and GitLab CI. Automated build, test, and deployment stages with rollback capabilities and Slack notifications.</p>
+          <div class="project-tags">
+            <span>Jenkins</span><span>GitHub Actions</span><span>GitLab CI</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🏗️</span>
+            <div class="project-links">
+              <a href="https://github.com/samiullah553/ecs-project" title="GitHub">⌥ Code</a>
+            </div>
+          </div>
+          <h3 class="project-name">Terraform AWS Infrastructure</h3>
+          <p class="project-desc">Modular Terraform codebase that provisions complete AWS environments — VPC, subnets, NAT gateways, ECS clusters, ALB, auto scaling, IAM roles, and CloudWatch — from a single command.</p>
+          <div class="project-tags">
+            <span>Terraform</span><span>AWS VPC</span><span>ECS</span><span>IAM</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-icon">⚡</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">⌥ Code</a>
+            </div>
+          </div>
+          <h3 class="project-name">Serverless Lambda API</h3>
+          <p class="project-desc">Production-ready Node.js REST API deployed on AWS Lambda with API Gateway, CloudWatch structured logging, environment-based configuration, and AWS SAM deployment automation.</p>
+          <div class="project-tags">
+            <span>Lambda</span><span>API Gateway</span><span>Node.js</span><span>SAM</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🐳</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">⌥ Code</a>
+            </div>
+          </div>
+          <h3 class="project-name">EKS Kubernetes Cluster</h3>
+          <p class="project-desc">Managed Kubernetes deployment on AWS EKS with Helm charts, horizontal pod autoscaling, namespace isolation, and integrated ECR container registry for private image management.</p>
+          <div class="project-tags">
+            <span>EKS</span><span>Kubernetes</span><span>Helm</span><span>ECR</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🔒</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">⌥ Code</a>
+            </div>
+          </div>
+          <h3 class="project-name">API Testing & QA Automation</h3>
+          <p class="project-desc">Comprehensive API testing suite using Postman collections for GET/POST endpoints. Verified error handling, try-catch coverage, and data validation across multiple microservices before production release.</p>
+          <div class="project-tags">
+            <span>Postman</span><span>REST APIs</span><span>QA</span><span>Microservices</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-tag">05 // contact</div>
+      <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+      <p class="contact-sub">Open to full-time roles, freelance projects, and exciting DevOps challenges. Let's build something great together.</p>
+      <div class="contact-grid">
+        <div class="contact-form-wrap">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Job opportunity / Project" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width" id="submitBtn">Send Message →</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>Direct Contact</h3>
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div>
+                <p class="ci-label">Email</p>
+                <a href="mailto:samiullah@example.com">samiullah553@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">💼</span>
+              <div>
+                <p class="ci-label">LinkedIn</p>
+                <a href="https://linkedin.com/in/samiullah553" target="_blank">linkedin.com/in/samiullah553</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🐙</span>
+              <div>
+                <p class="ci-label">GitHub</p>
+                <a href="https://github.com/samiullah553" target="_blank">github.com/samiullah553</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <p class="ci-label">Location</p>
+                <p>Karachi, Pakistan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo"><span class="prompt">~</span> samiullah</p>
+      <p class="footer-copy">© 2026 Samiullah Khan · Built with passion for automation</p>
+      <div class="footer-links">
+        <a href="https://github.com/samiullah553" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/samiullah553" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
