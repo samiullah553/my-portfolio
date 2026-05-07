@@ -1,0 +1,7 @@
+name: Deploy-Code
+
+on: [push]
+jobs:
+  name: code-chcekout
+  run-on: ubuntu-latest
+  
